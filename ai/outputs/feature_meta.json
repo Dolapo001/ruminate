@@ -1,0 +1,37 @@
+{
+  "features": [
+    "rumination_drop",
+    "rumination_mean",
+    "body_temp_max",
+    "body_temp_var",
+    "activity_mean",
+    "activity_night",
+    "conductivity_max",
+    "milk_drop",
+    "thi_max",
+    "heat_load",
+    "lying_mean"
+  ],
+  "friendly": {
+    "rumination_drop": "Rumination \u2193",
+    "rumination_mean": "Rumination level",
+    "body_temp_max": "Body temp \u2191",
+    "body_temp_var": "Temp variability",
+    "activity_mean": "Activity",
+    "activity_night": "Nocturnal activity",
+    "conductivity_max": "Milk conductivity \u2191",
+    "milk_drop": "Milk yield \u2193",
+    "thi_max": "Weather (THI)",
+    "heat_load": "Heat load",
+    "lying_mean": "Lying time"
+  },
+  "classes": [
+    "At Risk",
+    "Healthy",
+    "In Estrus"
+  ],
+  "heat_features": [
+    "thi_max",
+    "heat_load"
+  ]
+}
