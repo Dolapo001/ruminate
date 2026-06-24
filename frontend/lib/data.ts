@@ -99,7 +99,15 @@ const MOCK_ALERTS = MOCK_HERD.filter((c) => c.alert).sort((a, b) => {
    public URL. Locally, both fall back to NEXT_PUBLIC_API_URL. */
 function apiBase(): string | undefined {
   if (typeof window === "undefined") {
-    return process.env.INTERNAL_API_URL || process.env.NEXT_PUBLIC_API_URL;
+    let url = process.env.INTERNAL_API_URL || process.env.NEXT_PUBLIC_API_URL;
+    if (url && url.startsWith('/')) {
+      if (process.env.VERCEL_URL) {
+        url = `https://${process.env.VERCEL_URL}${url}`;
+      } else {
+        url = `http://localhost:3000${url}`;
+      }
+    }
+    return url;
   }
   return process.env.NEXT_PUBLIC_API_URL;
 }
