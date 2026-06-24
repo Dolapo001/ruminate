@@ -5,8 +5,11 @@ joblib==1.4.2
 numpy
 pandas
 scikit-learn
-xgboost==2.1.4
+xgboost==1.7.6
 shap
 numba>=0.59.0
 llvmlite>=0.42.0
 gunicorn==22.0.0
+dj-database-url==2.2.0
+psycopg2-binary==2.9.9
+whitenoise==6.7.0

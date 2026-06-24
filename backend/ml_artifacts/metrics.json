@@ -21,72 +21,72 @@
     },
     {
       "model": "XGBoost + SHAP (ours)",
-      "accuracy": 0.936,
-      "macro_f1": 0.777,
-      "macro_auc": 0.806
+      "accuracy": 0.941,
+      "macro_f1": 0.789,
+      "macro_auc": 0.808
     }
   ],
   "feature_importance": [
     {
       "feature": "Lying time",
-      "importance": 0.3732
+      "importance": 0.3941
     },
     {
       "feature": "Milk conductivity \u2191",
-      "importance": 0.214
+      "importance": 0.2015
     },
     {
       "feature": "Rumination \u2193",
-      "importance": 0.1966
+      "importance": 0.1851
     },
     {
       "feature": "Activity",
-      "importance": 0.1781
+      "importance": 0.1763
     },
     {
       "feature": "Temp variability",
-      "importance": 0.1303
+      "importance": 0.1255
     },
     {
       "feature": "Nocturnal activity",
-      "importance": 0.1047
+      "importance": 0.1069
     },
     {
       "feature": "Rumination level",
-      "importance": 0.0799
-    },
-    {
-      "feature": "Body temp \u2191",
-      "importance": 0.0789
+      "importance": 0.0717
     },
     {
       "feature": "Weather (THI)",
-      "importance": 0.0758
+      "importance": 0.0556
+    },
+    {
+      "feature": "Body temp \u2191",
+      "importance": 0.0553
     },
     {
       "feature": "Milk yield \u2193",
-      "importance": 0.0622
+      "importance": 0.054
     },
     {
       "feature": "Heat load",
-      "importance": 0.0199
+      "importance": 0.0141
     }
   ],
   "confusion_matrix": [
     [
       181,
-      145,
-      3
+      144,
+      4
     ],
     [
-      99,
-      5812,
-      30
+      70,
+      5849,
+      22
     ],
     [
-      3,
-      153,
-      324
+      5,
+      152,
+      323
     ]
   ]
 }
