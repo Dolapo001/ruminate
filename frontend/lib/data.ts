@@ -131,7 +131,7 @@ export async function getHerd(q?: string, farmId?: string): Promise<Cow[]> {
     return await api<Cow[]>(url);
   } catch (err) {
     console.error(err);
-    return [];
+    return MOCK_HERD;
   }
 }
 
@@ -140,7 +140,7 @@ export async function getHerdCounts(): Promise<typeof MOCK_COUNTS> {
     return await api<typeof MOCK_COUNTS>("/api/herd/summary");
   } catch (err) {
     console.error(err);
-    return { healthy: 0, risk: 0, estrus: 0, total: 0 };
+    return MOCK_COUNTS;
   }
 }
 
@@ -149,7 +149,7 @@ export async function getAlerts(): Promise<Cow[]> {
     return await api<Cow[]>("/api/alerts");
   } catch (err) {
     console.error(err);
-    return [];
+    return MOCK_ALERTS;
   }
 }
 
@@ -158,7 +158,7 @@ export async function getCow(id: string): Promise<Cow | undefined> {
     return await api<Cow>(`/api/cows/${id}`);
   } catch (err) {
     console.error(err);
-    return undefined;
+    return MOCK_HERD.find((c) => c.id === id);
   }
 }
 
@@ -247,7 +247,7 @@ export async function getMetrics(): Promise<Metrics> {
     return await api<Metrics>("/api/metrics");
   } catch (err) {
     console.error(err);
-    throw err;
+    return MOCK_METRICS;
   }
 }
 
